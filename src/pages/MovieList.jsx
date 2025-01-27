@@ -1,3 +1,5 @@
+import CardList from "../components/CardList";
+
 function MoviesList() {
     return (
         <>
