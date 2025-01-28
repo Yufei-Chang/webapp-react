@@ -17,7 +17,7 @@ function AppHeader() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Bool Books
+            Bool Movies
           </a>
           <button
             className="navbar-toggler"

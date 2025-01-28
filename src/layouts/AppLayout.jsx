@@ -1,21 +1,17 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import AppHeader from "../components/AppHeader";
+import AppFooter from "../components/AppFooter";
 
 function AppLayout() {
-    return (
-        <>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/movies">Film</Link>
-              </li>
-            </ul>
-          </nav>
-    
-          <Outlet />
-        </>
-      )}
+  return (
+    <>
+      <AppHeader />
+      <main className="container">
+        <Outlet />
+      </main>
+      <AppFooter />
+    </>
+  );
+}
 
 export default AppLayout;

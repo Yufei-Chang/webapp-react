@@ -10,14 +10,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="movies" element={<MovieList />} />
-          <Route path="movies/:slug" element={<MovieDetail />} />
-          <Route path="*" element={<NoPage />} />
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies">
+            <Route path="" element={<MovieList />} />
+            <Route path=":slug" element={<MovieDetail />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter >
 
   )
 };
